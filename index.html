@@ -31,20 +31,20 @@
             <div class="demo__column">
               <picture>
                 <source
+                  srcset="images/background/main-bg.jpg"
+                  media="(min-width: 1440px)"
+                />
+                <source
                   srcset="images/background/main-bg-1440w.jpg"
-                  media="(max-width: 1440px)"
+                  media="(min-width: 768px)"
                 />
                 <source
                   srcset="images/background/main-bg-768w.jpg"
-                  media="(max-width: 768px)"
-                />
-                <source
-                  srcset="images/background/main-bg-375w.jpg"
-                  media="(max-width: 375px)"
+                  media="(min-width: 375px)"
                 />
                 <img
                   class="demo__image"
-                  src="images/background/main-bg.jpg"
+                  src="images/background/main-bg-375w.jpg"
                   alt="demo project preview"
                 />
               </picture>
