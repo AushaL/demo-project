@@ -90,6 +90,8 @@ table {
 }
 
 img {
+  max-width: 100%;
+  height: auto;
   border-style: none;
 }
 
@@ -197,10 +199,11 @@ form input[type="email"]:focus {
 
 .demo__columns {
   display: flex;
+  justify-content: space-between;
 }
 
 .demo__column {
-  flex-basis: 50%;
+  flex-basis: 48%;
 }
 
 .demo__column:nth-child(1) {
@@ -209,6 +212,9 @@ form input[type="email"]:focus {
 
 .demo__text-content {
   max-width: 511px;
+  padding-left: 72px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .demo__title {
@@ -262,4 +268,99 @@ form input[type="email"]:focus {
   border: 1px solid var(--color-dark-blue);
 }
 
+.demo__image {
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 /* Modal */
+
+@media (max-width: 1440px) {
+  .demo__title {
+    font-size: 26px;
+    line-height: 41.6px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .demo__text-content {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 24px;
+  }
+
+  .demo__columns {
+    flex-direction: column;
+  }
+
+  .demo__column {
+    flex-basis: 100%;
+  }
+
+  .demo__text-content {
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .demo__title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .demo__text {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  .demo__button {
+    min-width: 261px;
+    padding: 16px 18px;
+    padding-right: 65px;
+  }
+
+  .demo__image {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .demo__text-content {
+    padding: 24px;
+  }
+
+  .demo__title {
+    font-size: 17px;
+    line-height: 27.2px;
+    margin-bottom: 14px;
+  }
+
+  .demo__text {
+    font-size: 13x;
+    line-height: 20.8px;
+    margin-bottom: 18px;
+  }
+
+  .demo__button {
+    min-width: 100%;
+    padding-right: 50px;
+  }
+
+  .demo__button::after {
+    width: 34px;
+    height: 34px;
+  }
+}
