@@ -52,6 +52,37 @@
           </div>
         </div>
       </section>
+      <section class="login-modal">
+        <h2 class="login-modal__title">Войти в систему</h2>
+        <form action="" method="POST">
+          <input
+            class="logal-mobal__input"
+            type="text"
+            name="user-login"
+            placeholder="Email/Телефон"
+            required
+          />
+          <input
+            class="logal-mobal__input"
+            type="password"
+            name="user-password"
+            placeholder="Пароль"
+            required
+          />
+          <label class="login-modal__checkbox">
+            <input type="checkbox" />
+            Запомнить пароль
+          </label>
+          <a class="login-modal__restore-link" href="#">Восстановить</a>
+          <button class="login-modal__button button" type="submit">
+            Войти
+          </button>
+          <a class="login-modal__button--alt button" href="#"
+            >Зарегистрироваться</a
+          >
+        </form>
+        <button class="close-button"></button>
+      </section>
     </main>
     <script src="js/script.js"></script>
   </body>
