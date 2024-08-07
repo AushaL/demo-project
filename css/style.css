@@ -40,6 +40,7 @@ section {
 }
 
 body {
+  position: relative;
   width: 100vw;
   max-width: 100%;
   height: 100vh;
@@ -136,9 +137,7 @@ button:focus {
 }
 
 form input[type="text"],
-form input[type="search"],
-form textarea,
-form input[type="email"] {
+form input[type="password"] {
   width: 100%;
   padding: 24px;
   border: 0;
@@ -151,9 +150,7 @@ form input[type="email"] {
 }
 
 form input[type="text"]:focus,
-form input[type="search"]:focus,
-form textarea:focus,
-form input[type="email"]:focus {
+form input[type="password"]:focus {
   border: 1px solid var(--color-black);
   outline: none;
 }
@@ -173,12 +170,6 @@ form input[type="email"]:focus {
   clip: rect(0 0 0 0);
 }
 
-.container {
-  width: 100%;
-  max-width: 1680px;
-  margin: 0 auto;
-}
-
 .button {
   padding: 18px;
   color: var(--color-white);
@@ -188,6 +179,17 @@ form input[type="email"]:focus {
   line-height: 29px;
   border-radius: 4px;
   transition: all 0.4s ease;
+}
+
+.close-button {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  background-image: url("../images/icons/cross-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
 }
 
 /* Main */
@@ -276,6 +278,125 @@ form input[type="email"]:focus {
 }
 
 /* Modal */
+
+.login-modal {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  padding: 24px;
+  padding-top: 80px;
+  border-radius: 10px;
+  background-color: var(--color-main-bg);
+  box-shadow: -3px -3px 28px -5px #afafaf2b;
+  transition: top 0.4s ease;
+}
+
+.login-modal.active {
+  top: 100px;
+}
+
+.login-modal__close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.login-modal__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32.78px;
+  color: var(--color-black);
+  margin-bottom: 18px;
+}
+
+.logal-mobal__input {
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.logal-mobal__input::placeholder {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24.59px;
+  color: var(--color-blue);
+}
+
+.logal-mobal__input:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.login-modal__checkbox label {
+  position: relative;
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: var(--color-black);
+  padding-left: 36px;
+}
+
+.login-modal__checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.login-modal__checkbox label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-black);
+  border-radius: 3px;
+  background-color: transparent;
+  transform: translateY(-50%);
+}
+
+.login-modal__checkbox input:checked ~ label::before {
+  background-image: url("../images/icons/check-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 85%;
+}
+
+.login-modal__restore-link {
+  display: block;
+  margin-bottom: 36px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27.32px;
+  color: var(--color-dark-blue);
+}
+
+.login-modal__button {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.login-modal__button:hover {
+  color: var(--color-dark-blue);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark-blue);
+}
+
+.login-modal__button--alt {
+  background-color: transparent;
+  border: 1px solid var(--color-dark-blue);
+  color: var(--color-dark-blue);
+}
+
+.login-modal__button--alt:hover {
+  text-decoration: none;
+}
+
+.login-modal__button:not(:last-child) {
+  margin-bottom: 4px;
+}
 
 @media (max-width: 1440px) {
   .demo__title {

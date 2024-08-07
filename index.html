@@ -69,19 +69,21 @@
             placeholder="Пароль"
             required
           />
-          <label class="login-modal__checkbox">
-            <input type="checkbox" />
-            Запомнить пароль
-          </label>
+          <div class="login-modal__checkbox">
+            <input id="check" type="checkbox" />
+            <label for="check">Запомнить пароль</label>
+          </div>
           <a class="login-modal__restore-link" href="#">Восстановить</a>
           <button class="login-modal__button button" type="submit">
             Войти
           </button>
-          <a class="login-modal__button--alt button" href="#"
+          <a
+            class="login-modal__button login-modal__button--alt button"
+            href="#"
             >Зарегистрироваться</a
           >
         </form>
-        <button class="close-button"></button>
+        <button class="login-modal__close-button close-button"></button>
       </section>
     </main>
     <script src="js/script.js"></script>
