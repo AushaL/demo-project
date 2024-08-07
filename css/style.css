@@ -453,6 +453,12 @@ form input[type="password"]:focus {
   }
 }
 
+@media (max-width: 550px) {
+  .login-modal {
+    width: 90%;
+  }
+}
+
 @media (max-width: 375px) {
   body {
     padding-left: 14px;
