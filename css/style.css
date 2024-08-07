@@ -281,7 +281,7 @@ form input[type="password"]:focus {
 
 .login-modal {
   position: fixed;
-  top: 100px;
+  top: -100%;
   left: 50%;
   transform: translateX(-50%);
   width: 500px;
@@ -294,7 +294,7 @@ form input[type="password"]:focus {
 }
 
 .login-modal.active {
-  top: 100px;
+  top: 50px;
 }
 
 .login-modal__close-button {
