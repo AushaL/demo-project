@@ -44,14 +44,14 @@ body {
   max-width: 100%;
   height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 36px 40px;
   overflow-x: hidden;
   color: var(--color-blue);
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   text-align: left;
-  background-color: var(--color-main-bg);
+  background-color: var(--color-white);
 }
 
 *::selection {
@@ -171,6 +171,95 @@ form input[type="email"]:focus {
   clip: rect(0 0 0 0);
 }
 
+.container {
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 18px;
+  color: var(--color-white);
+  background-color: var(--color-dark-blue);
+  text-align: center;
+  font-weight: 500;
+  line-height: 29px;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+
 /* Main */
+
+.demo {
+  background-color: var(--color-main-bg);
+  border-radius: 10px;
+}
+
+.demo__columns {
+  display: flex;
+}
+
+.demo__column {
+  flex-basis: 50%;
+}
+
+.demo__column:nth-child(1) {
+  align-self: center;
+}
+
+.demo__text-content {
+  max-width: 511px;
+}
+
+.demo__title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 48px;
+  margin-bottom: 18px;
+}
+
+.demo__text {
+  margin-bottom: 36px;
+  font-size: 17px;
+  line-height: 27.2px;
+  color: var(--color-grey);
+}
+
+.demo__button {
+  min-width: 341px;
+  position: relative;
+  padding: 19.5px 24px;
+  padding-right: 72px;
+  border-radius: 60px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.demo__button::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-white);
+  background-image: url("../images/icons/arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.demo__button:hover {
+  color: var(--color-dark-blue);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark-blue);
+}
+
+.demo__button:hover::after {
+  border: 1px solid var(--color-dark-blue);
+}
 
 /* Modal */
